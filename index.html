@@ -33,3 +33,57 @@
   <button type="button" class="button">CSS</button>
   <button type="button" class="button">JavaScript</button>
 </div>
+
+<!-- В исходном коде присутсвует две ссылки с одним и тем же контентом - строкой Текст.
+У ссылок имеются названия классов - link-inline и link-block.
+Для первой ссылки (с классом link-inline): оберни контент ссылки - строку Текст строчным тегом span .
+Для второй ссылки (с классом link-block): оберни контент ссылки - строку Текст блочным тегом p для второй ссылки.
+Визуально убедись, что к каждой из ссылок применилось свойство inline или block.
+Порядок элементов a должен быть сохранен.-->
+<div class="box">
+  <a href="#" class="link-inline"><span>Text</span></a>
+  without line break
+</div>
+<div class="box">
+  <a href="#" class="link-block"><p>Text</p> </a>
+  with line break
+</div>
+
+<!-- Исправьте порядок нумерации удалив атрибут тега ol.
+Расставь элементы li в нужном порядке согласно описанию последовательности загрузки Номер 1 должен соответствовать первому файлу, который будет загружен. Номер 2 - второму, номер 3 - третьему.-->
+<div class="card">
+  <h4 class="card-title">The order in which files are loaded by the browser</h4>
+  <ol class="card-items">
+    <li class="card-item">HTML file</li>
+    <li class="card-item">Link to files inside head</li>
+    <li class="card-item">Link to files inside body</li>
+  </ol>
+</div>
+
+<!-- Группировка однородных наборов тегов. -->
+<ul class="cards">
+  <h4 class="card-title">Card title 1</h4>
+  <div class="wrp-img">
+    <li class="card"></li>
+    <li class="card">
+      <img class="card-image" src="photo.jpg" alt="image description" />
+    </li>
+  </div>
+  <p class="card-description">Description of the topic 1</p>
+</ul>
+
+<ul class="cards">
+  <h4 class="card-title">Card title 2</h4>
+  <div class="wrp-img">
+    <img class="card-image" src="photo2.jpg" alt="image description" />
+  </div>
+  <p class="card-description">Description of the topic 2</p>
+</ul>
+
+<ul class="cards">
+  <h4 class="card-title">Card title 3</h4>
+  <div class="wrp-img">
+    <img class="card-image" src="photo3.jpg" alt="image description" />
+  </div>
+  <p class="card-description">Description of the topic 3</p>
+</ul>
