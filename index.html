@@ -1,4 +1,4 @@
-<!-- Что такое HTML тег. Парный тег. Оберни текст тегом h1 -->
+<!-- 1. Что такое HTML тег. Парный тег. Оберни текст тегом h1 -->
 <h1>The main theme of the web page in the h1 header.</h1>
 
 <!-- HTML комментарий. Напиши html комментарий с текстом Комментарий отвечает на вопрос "ЗАЧЕМ НАПИСАНА ЭТА ЧАСТЬ КОДА". -->
@@ -11,27 +11,25 @@
    alt: текст с описанием изображения Image example;
    width: ширина в 200 пикселей;
    height: height в 150 пикселей. -->
-<img src="photo.jpg"
-   alt="Image example"
-   width="200"
-   height="150"
->
+<img src="photo.jpg" alt="Image example" width="200" height="150" />
 
 <!-- Вложенность тегов. Используя теги ul и li перечисли 3 основные веб технологии. Порядок текста должен быть сохранен. -->
 <ul>
-   <li>HTML</li> 
-   <li>CSS</li> 
-   <li>JavaScript</li>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
 </ul>
 
-<!-- -->
-<div>
-   <button type="button" class="button">inline</button>
-   <button type="button" class="button">block</button>
-   <button type="button" class="button">inline-block</button>
-   </div>
-   <div>
-   <button type="button" class="button">HTML</button>
-   <button type="button" class="button">CSS</button>
-   <button type="button" class="button">JavaScript</button>
-   </div>
+<!--5. Универсальный блочный контейнер - div. Yниверсальный строчный контейнер - span. 
+Оберни строчные теги button контейнером div с классом buttons так, чтобы в двух рядах было по три кнопки и каждый ряд начинался с новой строки.
+Порядок элементов button должен быть сохранен.-->
+<div class="buttons">
+  <button type="button" class="button">inline</button>
+  <button type="button" class="button">block</button>
+  <button type="button" class="button">inline-block</button>
+</div>
+<div class="buttons">
+  <button type="button" class="button">HTML</button>
+  <button type="button" class="button">CSS</button>
+  <button type="button" class="button">JavaScript</button>
+</div>
