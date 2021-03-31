@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <!-- 1. Что такое HTML тег. Парный тег. Оберни текст тегом h1 -->
 <h1>The main theme of the web page in the h1 header.</h1>
 
@@ -62,28 +64,183 @@
 
 <!-- Группировка однородных наборов тегов. -->
 <ul class="cards">
-  <h4 class="card-title">Card title 1</h4>
-  <div class="wrp-img">
-    <li class="card"></li>
-    <li class="card">
+  <li class="card">
+    <h4 class="card-title">Card title 1</h4>
+    <div class="wrp-img">
       <img class="card-image" src="photo.jpg" alt="image description" />
-    </li>
-  </div>
-  <p class="card-description">Description of the topic 1</p>
+    </div>
+    <p class="card-description">Description of the topic 1</p>
+  </li>
+
+  <li class="card">
+    <h4 class="card-title">Card title 2</h4>
+    <div class="wrp-img">
+      <img class="card-image" src="photo2.jpg" alt="image description" />
+    </div>
+    <p class="card-description">Description of the topic 2</p>
+  </li>
+
+  <li class="card">
+    <h4 class="card-title">Card title 3</h4>
+    <div class="wrp-img">
+      <img class="card-image" src="photo3.jpg" alt="image description" />
+    </div>
+    <p class="card-description">Description of the topic 3</p>
+  </li>
 </ul>
 
-<ul class="cards">
-  <h4 class="card-title">Card title 2</h4>
-  <div class="wrp-img">
-    <img class="card-image" src="photo2.jpg" alt="image description" />
-  </div>
-  <p class="card-description">Description of the topic 2</p>
-</ul>
+<!-- Ссылка на внешний ресурс. Aтрибут rel означает "отношения (relationship)". Он используется в элементах link и a и описывает с помощью разных значений как указанный элемент связан с содержащим его документом.-->
+<a
+  href="https://goit.global"
+  target="_blank"
+  rel="noreferrer nofollow noopener"
+>
+  GoIT
+</a>
 
-<ul class="cards">
-  <h4 class="card-title">Card title 3</h4>
-  <div class="wrp-img">
-    <img class="card-image" src="photo3.jpg" alt="image description" />
-  </div>
-  <p class="card-description">Description of the topic 3</p>
-</ul>
+<!-- 10. Ссылка на скачиваемый файл. Атрибут download -->
+<a href="resume.pdf" download>Resume</a>
+
+<!-- Ссылка для телефона и email.-->
+<!-- Link to phone number  -->
+<a href="tel:+14251234563">+1 (425) 123-45-63</a>
+<!-- Link to e-mail address -->
+<a href="mailto:example@gmail.com">example@gmail.com</a>
+
+<!-- Ссылка-якорь. Расставь значения атрибутов id для навигации по странице с помощью ссылок из aside. -->
+<header id="top">
+  <!-- content from logo, nav, search  -->
+</header>
+<main>
+  <aside>
+    <ul>
+      <li><a href="#top">Top of the page</a></li>
+      <li><a href="#page-theme">Main theme</a></li>
+      <li><a href="#bottom">Footer of the page</a></li>
+    </ul>
+  </aside>
+  <article id="page-theme">
+    <!-- main page theme -->
+  </article>
+</main>
+<footer id="bottom">
+  <!-- content from logo, nav, contacts, copyright  -->
+</footer>
+
+<!-- Изображение с подписью. Элементы figure и figcaption.-->
+<figure>
+  <img src="photo.jpg" alt="photo description" />
+  <figcaption>
+    Only one img element and any number of text or other elements can be used
+    inside link. You cannot use interactive elements inside link tag.
+  </figcaption>
+</figure>
+
+<!-- Размещение только одного тега img внутри ссылки. Внутри ссылки допускается размещение любого числа svg элементов, но не остальных форматов -->
+<a href="./about">
+  <img src="photo.jpg" alt="note in laptop" />
+</a>
+<a href="./about">
+  <img src="photo2.jpg" alt="note on paper" />
+</a>
+
+<!-- index.html - точка входа в приложение -->
+<!--  TODO 
+* create project with the following structure:
+images/logo.svg
+css/style.css
+about.html
+index.html
+my.github.io/images/logo.svg
+my.github.io/css/style.css
+my.github.io/about.html
+my.github.io/index.html
+ -->
+
+<!-- Относительный путь. '../' - подъем из папки (директории).-->
+<a href="../index.html">
+  <img src="../images/logo.png" alt="logo" />
+</a>
+
+<!-- Учет зависимости пути от регистра. Есть код, который работает в widows, но не будет работать в linux. Исправь регистр букв в атрибутах href и src -->
+<!-- file about.html -->
+<a href="../index.html">
+  <img src="../images/logo.png" alt="logo" />
+</a>
+
+<!-- 1. Список dl из пар dt и dd .-->
+<dl>
+  <dt>Tag span.</dt>
+  <dd>A universal container for text content.</dd>
+  <dt>Tag pre.</dt>
+  <dd>Preservation of spaces and hyphens.</dd>
+  <dt>Tag sup and sub.</dt>
+  <dd>Displays characters in superscript and subscript.</dd>
+  <dt>Tag strong.</dt>
+  <dd>Highlighting an important word or a whole phrase within the text.</dd>
+  <dt>Tag b.</dt>
+  <dd>Visual highlighting of text with a thicker font.</dd>
+  <dt>Tag em.</dt>
+  <dd>Semantically and visually (italic) emphasizes the text.</dd>
+  <dt>Tag i.</dt>
+  <dd>Visually (italic) emphasizes the text.</dd>
+  <dt>Tag address.</dt>
+  <dd>Wraps tags with content about an address or recipient.</dd>
+</dl>
+
+<!-- 2. Тег time. -->
+<p>
+  Epoch of Unix time started at
+  <time datetime="1970-01-01T00:00"> 00:00:00 UTC on 1 January 1970</time>
+</p>
+
+<!-- 3.Символьные подстановки. Используйте для поиска в ключевые слова: unicode html и название нужной подстановки (или словесное описание на что это похоже).-->
+<span>&#174;</span>
+
+<!-- 4.Аудио.-->
+<audio controls preload="none">
+  <source
+    src="https://goit.ua/autocheck/bensound-summer.mp3"
+    type="audio/mp3"
+  />
+</audio>
+
+<!-- 5. Верстка таблицы. Теги таблицы и атрибут colspan. Сверстай таблицу по ее изображению с помощью тегов и атрибута colspan. -->
+<table>
+  <caption>
+    What is the difference between block, inline and inline-block
+  </caption>
+  <thead>
+    <tr>
+      <th>/</th>
+      <th>block</th>
+      <th>inline</th>
+      <th>inline-block</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>height determined</th>
+      <td colspan="3">by height of content</td>
+    </tr>
+
+    <tr>
+      <th>width determined</th>
+      <td>by width of parent element</td>
+      <td colspan="2">by width of content</td>
+    </tr>
+
+    <tr>
+      <th>Is it possible to set height and width</th>
+      <td>yes</td>
+      <td>no</td>
+      <td>yes</td>
+    </tr>
+
+    <tr>
+      <th>How line wrapping works</th>
+      <td>always on a new line</td>
+      <td colspan="2">only when filling the width of the parent element</td>
+    </tr>
+  </tbody>
+</table>
