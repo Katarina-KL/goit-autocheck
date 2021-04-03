@@ -1,0 +1,91 @@
+/* 1. Подключение CSS файлов к странице в index.html */
+
+/* 2. Синтаксис CSS правила */
+p { 
+   color: red; 
+   font-size: 20px; 
+}
+
+/*  3. Селекторы и вес селектора: любой элемент, приоритет без ранга */
+* { 
+   margin: 0; 
+   padding: 0; 
+}
+
+/* 4. Селекторы и вес селектора: тег, приоритет 4-го ранга */
+li { 
+   list-style: none; 
+   color: green; 
+}
+
+/* 5.Селекторы и вес селектора: класс, приоритет 3-го ранга */
+.rule { 
+   list-style: upper-roman; 
+   color: navy; 
+}
+
+/* 6. Селекторы и вес селектора: избегаем повторения кодa. 
+создавать для общих правил один отдельный класс и несколько классов для уникальных правил. 
+DRY (don't repeat yourself) 
+Двум элементам с классом common-rule добавлены классы first-rule и last-rule, т.е. создана композиция с классом common-rule.*/
+common-rule { 
+   list-style: upper-roman; 
+   font-size: 20px; 
+} 
+.first-rule { 
+   color:red; 
+} 
+.last-rule { 
+   color: green; 
+}
+
+/* 7. Селекторы и вес селектора: композиций классов, приоритет через суммирование разрядов */
+.btn { 
+   border: none; 
+   padding: .25rem 1.25rem; 
+} 
+.link { 
+   text-decoration: none;
+   color: navy; 
+} 
+/* Напиши свой код под этой строкой */ 
+.btn.active { 
+   color:red; 
+} 
+.link.active { 
+   font-weight: 700; 
+}
+
+/* 8. Селекторы и вес селектора: псевдокласс, приоритет 3-го ранга. перечислить два разных селектора для одного набора CSS правил */
+.link { 
+   text-decoration: none; 
+   color: navy; 
+   opacity: 0.5; } 
+   /* Напиши свой код под этой строкой */ 
+.link:hover, 
+.link:focus { 
+   opacity: 1; 
+}
+
+/* 9. Селекторы и вес селектора: атрибут, приоритет 3-го ранга. Повышаем специфичность */
+[type] {
+   color: white;
+}
+
+button[type="reset"] {
+   color: green;
+}
+
+/* 10. Селектор атрибута: символ ^. для выбора тех значений атрибута, которые начинаются с определенных символов. 
+#ancor" начинается с "# */
+.link {
+   text-decoration: none;
+}
+
+[href^="./"] {
+	color: red; 
+}
+
+[href^="https"] {
+	color: navy; 
+}
